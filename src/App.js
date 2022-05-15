@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Field from './components/field/Field';
+import Settings from './components/settings/Settings';
+import './style.scss'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [difficulty, setDifficulty] = useState('normal')
+    function difficultySettup(newDifficulty){
+        setDifficulty(newDifficulty)
+    }
+	return (
+		<div className="App">
+			<Settings difficultySettup={difficultySettup} difficultyCurrent={difficulty}/>
+			<Field difficulty={difficulty}/>
+		</div>
+	);
 }
 
 export default App;

@@ -1,0 +1,25 @@
+.tile {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        color: #FFFFFF;
+    }
+}
+.closed {
+    background: linear-gradient(315deg, rgba(7,1,45,1) 0%, rgba(0,20,233,1) 100%);
+    border: 2px solid #F3F3F3;
+    cursor: pointer;
+}
+.open {
+    background-color: cadetblue;
+    border: 1px solid #141414;
+}
+.flag {
+    background: linear-gradient(315deg, rgba(75,1,17,1) 0%, rgba(150,0,12,1) 100%);
+}
+.open.bomb {
+    background-color: brown;
+}
